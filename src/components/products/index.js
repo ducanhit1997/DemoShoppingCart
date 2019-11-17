@@ -34,7 +34,6 @@ class ListProduct extends Component {
             },
         ],
         sum: 0,
-        dataLoad: []
     }
     formatNumber = (num) => {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
@@ -67,18 +66,8 @@ class ListProduct extends Component {
         })
         this.setState({ listProduct: dataAfterUpdate, sum: total })
     }
-    // componentWillMount(){
-    //     const newList = this.state.listProduct
-    //     var total = 0;
-    //     newList.map((val) => {
-    //         let objetTmp = { ...val, money: parseInt(val.price + "") }
-    //         total += objetTmp.money;
-    //     })
-    //     this.setState({ listProduct: dataLoad, sum: total }) 
-    // }
     render() {
         const { listProduct, sum } = this.state
-        // console.log(listProduct)
         return (
             <div>
 
